@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Web Page</title>
+</head>
+<body>
+    <form id="basicBootstrapForm"  ng-submit="createdata()" class="form-horizontal" >
+        <div class="form-group">
+            <label class="col-md-3 col-xs-3 col-sm-3 control-label">Full Name* </label>
+            <div class="col-md-4 col-xs-4 col-sm-4">               <input type="text" placeholder="First Name" class="form-control" ng-model="FirstName" required > </input>               </div>
+            <div class="col-md-4 col-xs-4 col-sm-4">                   <input type="text" placeholder="Last Name" class="form-control" ng-model="LastName" required> </input>               </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 col-xs-3 col-sm-3 control-label">Address</label>
+            <div class="col-md-8 col-xs-8 col-sm-8">                   <textarea rows="3" class="form-control" ng-model="Adress"> </textarea>                   </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 col-xs-3 col-sm-3 control-label">Email address*</label>
+            <div class="col-md-4 col-xs-4 col-sm-4" id="eid">                   <input  type="email" class="form-control" ng-model="EmailAdress" required>                   </input>               </div>
+            <div class="col-sm-4 col-xs-4 tooltptext">                   <span >Provide a valid email id for further updates</span>                   </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 col-xs-3 col-sm-3 control-label">Phone*</label>
+            <div class="col-md-4 col-xs-4 col-sm-4">                   <input type="tel"  class="form-control" ng-model="Phone" required  pattern="^\d{10}$"> </input>               </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 col-xs-3 col-sm-3 control-label">Gender*</label>
+            <div class="col-md-4 col-xs-4 col-sm-4">                <label>   <input type="radio" name="radiooptions" ng-model="radiovalue" value="Male" required > Male </input></label>                   <label> <input type="radio"  name="radiooptions" ng-model="radiovalue" value="FeMale"> FeMale</input></label>               </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 col-xs-3 col-sm-3 control-label">Hobbies</label>
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <div>                       <input type="checkbox" id="checkbox1" value="Cricket"   >                       <label class="checks" style="text-align: right"> Cricket </label>                   </div>
+                <div >                       <input type="checkbox" id="checkbox2" value="Movies">                       <label  class="checks">Movies </label>                   </div>
+                <div >                       <input type="checkbox" id="checkbox3" value="Hockey">                       <label  class="checks">Hockey</label>                   </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 col-xs-3 col-sm-3 control-label">Languages</label>
+            <div class="col-md-4 col-xs-4 col-sm-4" >
+                <multi-select>
+                    <div class="ui-autocomplete-multiselect ui-state-default ui-widget" id="msdd" style="min-height:30px;max-width:200px">
+                        <!--         <input type="text" style="border: none; outline: none; width: 15px; height: 25px"/>-->
+                    </div>
+                </multi-select>
+                <!--                   <select type="text" class="form-control" id="Languages" ng-model="Language" ng-init="Language=''">                  <option value=""> Select languages</option>                   </select>-->
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 col-xs-3 col-sm-3 control-label">Skills</label>
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <select type="text" class="form-control" id="Skills" ng-model="Skill" ng-init="Skill=''" >
+                    <option value="">Select Skills</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 col-xs-3 col-sm-3 control-label">Country*</label>
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <select type="text" class="form-control" id="countries" required ng-model="country" ng-init="country=''">
+                    <option value="">Select Country</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 col-xs-3 col-sm-3 control-label" for="usr">Select Country :</label>
+            <div class="col-md-4 col-xs-4 col-sm-4">
+            
+            
+            <select id="country" style="width:300px;" tabindex="-1" aria-hidden="true">
+                <!-- Dropdown List Option -->
+                <option></option><option value="Australia">Australia</option><option value="Bangladesh">Bangladesh</option><option value="Denmark">Denmark</option><option value="Hong Kong">Hong Kong</option><option value="India">India</option><option value="Japan">Japan</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="South Africa">South Africa</option><option value="United States of America">United States of America</option></select>
+            
+            
+                </div>
+        </div>
+        <div>
+            <label>Date Of Birth</label>
+            <div>
+                <select type="text" placeholder="Year" id="yearbox" ng-model="yearbox" ng-init="yearbox=''" required>
+                    <option value="">year </option>
+                </select>
+            </div>
+            <div>
+                <select type="text" placeholder="Month" ng-model="monthbox" ng-init="monthbox=''" required>
+                    <option value="">Month</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+            </div>
+            <div >
+                <select type="text" placeholder="Day" id="daybox" ng-model="daybox" ng-init="daybox=''" required>
+                    <option value=""> Day </option>
+                    <option value="1">1 </option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <label>Password</label>
+            <div>                   
+                <input id="firstpassword" type="password" ng-model="Password" required  minlength="6" onblur="validatepattern(this)"> </input>               </div>
+            </div>
+        <div>
+            <label>Confirm Password</label>
+            <div>
+                <input id="secondpassword" type="password" ng-model="CPassword" required onblur="validatepasswords(this)" > </input>             <script>                 function validatepasswords(input)                 {                     var password1= document.getElementById("firstpassword").value;                     var password2=document.getElementById("secondpassword").value;                     if (!(password1==password2))                     {                         input.setCustomValidity('Passwords dont match');                     }                     else                     {                         input.setCustomValidity('');                     }                 }                 function validatepattern(input)                 {                     var password1= document.getElementById("firstpassword").value;                     var pattern =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]){4,6}(?!.*\s ).*$/;                     if (!(pattern.test(input.value)))                     {                         input.setCustomValidity('Please Enter an UpperCase,LowerCase Alphabet and a Number');                     }                     else                     {                         input.setCustomValidity('');                     }                 }                 </script>
+            </div>
+        </div>
+        <div>
+            <div>                   
+                <button id="submitbtn" type="submit" name="signup" value="sign up"> Submit </button>
+                <button id="Button1" type="button" value="Refresh" >Refresh</button>
+            </div>
+        </div>
+    </form>
+    </p>
+</body>
+</html> 

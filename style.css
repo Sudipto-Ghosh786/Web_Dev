@@ -1,0 +1,70 @@
+#box {
+    width: 250px;
+    height: 250px;
+    border: 10px solid red;
+    padding: 120px;
+    margin: 120px;
+}
+
+
+#box1 {
+    width: 200px;
+    height: 200px;
+    left: 100px;
+    background-color: gold;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top: 20px solid green;
+    border-right: 20px solid green;
+}
+
+
+#top_div {
+    width: 200px;
+    height: 200px;
+    left: 100px;
+    background-color: red;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 15px solid;
+}
+
+#bottom_div {
+    width: 200px;
+    height: 200px;
+    left: 100px;
+    background-color: orange;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+}
+
+
+
+/* 1 */
+div p::first-letter {
+    color: blue;
+}
+
+
+/* 3 */
+div p::before {
+    content: "Welcome";
+}
+
+/* 5 */
+div p::first-line {
+    font-size: 20px;
+}
+
+
+/* 4 */
+div ~ p::after {
+    content: "Bye";
+}
+
+/* 2 */
+.even::first-letter {
+    color: orange;
+}
+
+
