@@ -136,5 +136,114 @@ console.log("Student - 3 College :- " + student3.college);
 
 
 
+/* Classes In JavaScript */
+class Person {
+    _x = 100000;
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        this._power = 100;
+    }
+    set setName(name) {
+        this.name = this.name;
+    }
+    get getName() {
+        return this.name;
+    }
+
+    set setAge(age) {
+        this.age = this.age;
+    }
+
+    get getAge() {
+        return this.age;
+    }
+    printData() {
+        console.log("Name :- " + this.name);
+        console.log("Age :- " + this.age);
+    }
+}
+
+const person = new Person("Pizza", 12);
+console.log(person);
+console.log(person.getAge);
+
+
+
+
+
+
+
+
+
+
+console.log("\n\n\n\n");
+
+
+/* AS-II */ 
+class Vechile {
+    #capacity = "4000W";
+    constructor(name, capacity) {
+        this.name = name;
+        this.#capacity = capacity;
+    }
+
+    get getCapacity() {
+        return this.#capacity;
+    }
+
+    startEngine() {
+        console.log(`${this.name} can start and has capacity of ${this.#capacity}.`);
+    }
+
+    stopEnginer() {
+        console.log(`${this.name} can stop and has capacity of ${this.#capacity}.`);
+    }
+
+    run() {
+        console.log(`${this.name} can run on manual mode.`);
+    }
+
+    static brake() {
+        console.log(`We are Calling static Method.`);
+    }
+
+    callCapacity() {
+        console.log(`${this.name} has this much ${this.#capacity} capacity.`);
+    }
+}
+
+
+class TwoWheelers extends Vechile {
+    #tyres = 2;
+    #engine = "3000cc";
+    constructor(name, capacity) {
+        super(name, capacity);
+    }
+
+    print() {
+        console.log("Parent Class :- " + this.name + ' ' + this.#tyres + ' ' 
+        + this.#engine + ' ' + this.getCapacity);
+    }
+}
+
+class ThreeWheelers extends Vechile {
+    #tyres = 3;
+    #engine = "6000cc";
+    constructor(name, capacity) {
+        super(name, capacity);
+    }
+
+    print() {
+        console.log("Parent Class :- " + this.name + ' ' + this.#tyres + ' ' 
+        + this.#engine + ' ' + this.getCapacity);
+    }
+}
+
+
+let tw = new ThreeWheelers("ThreeBike", "4000W")
+Vechile.brake();
+tw.print()
+
 
 
