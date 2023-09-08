@@ -247,3 +247,15 @@ tw.print()
 
 
 
+
+
+
+/* AS - III */
+let str = "Java Is open source language and Javascript is scripting language. java is very user-friendly and easy to use";
+console.log(str.replace("Java", "Python"));
+console.log(str.replaceAll("java", "python"));
+console.log(str.replaceAll("Java", "Hello"));
+console.log(str.replace(/is/ig, 'are'));
+
+
+
